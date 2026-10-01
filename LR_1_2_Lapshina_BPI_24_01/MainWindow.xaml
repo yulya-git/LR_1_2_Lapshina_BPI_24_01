@@ -1,0 +1,88 @@
+﻿<Window x:Class="LR_1_2_Lapshina_BPI_24_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LR_1_2_Lapshina_BPI_24_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="515.148">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <EventSetter Event="TextChanged" Handler="checkInputData"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Column="1" Grid.Row="0">
+            <Label>Выберите тип фигуры</Label>
+        </WrapPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <RadioButton x:Name="cubeRadio" Content="Куб" IsChecked="True"/>
+            <RadioButton x:Name="cylinderRadio" Content="Цилиндр"/>
+            <RadioButton x:Name="tetrahedronRadio" Content="Тетраэдр"/>
+        </StackPanel>
+
+        <!-- Куб: одна сторона -->
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="cubePanel" Visibility="Visible">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Сторона"/>
+                <TextBox Width="100" Height="20" x:Name="inputCubeSide"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Цилиндр: радиус и высота -->
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="cylinderPanel" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Радиус"/>
+                <TextBox Width="100" Height="20" x:Name="inputCylRadius"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Высота"/>
+                <TextBox Width="100" Height="20" x:Name="inputCylHeight"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Тетраэдр: одна сторона -->
+        <StackPanel Grid.Column="1" Grid.Row="2" x:Name="tetrahedronPanel" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Сторона"/>
+                <TextBox Width="100" Height="20" x:Name="inputTetraSide"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Объём: "/>
+                <Label Content="Не посчитан" x:Name="resultV"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Площ. поверхности:"/>
+                <Label Content="Не посчитана" x:Name="resultS"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Сообщение:"/>
+                <Label Content="Нет" x:Name="message"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="4" Height="20" Content="Посчитать объём" x:Name="calculateV"/>
+        <Button Grid.Column="1" Grid.Row="5" Height="20" Content="Посчитать площадь поверхности" x:Name="calculateS"/>
+    </Grid>
+</Window>

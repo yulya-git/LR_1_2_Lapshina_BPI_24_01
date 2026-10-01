@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37627.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LR_1_2_Lapshina_BPI_24_01", "LR_1_2_Lapshina_BPI_24_01\LR_1_2_Lapshina_BPI_24_01.csproj", "{06972B2A-467A-4764-BCFD-E840BCCF3396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06972B2A-467A-4764-BCFD-E840BCCF3396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06972B2A-467A-4764-BCFD-E840BCCF3396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06972B2A-467A-4764-BCFD-E840BCCF3396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06972B2A-467A-4764-BCFD-E840BCCF3396}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5D65C85-61DA-4736-BBCF-FEE7351FD4C2}
+	EndGlobalSection
+EndGlobal
